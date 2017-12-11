@@ -14,3 +14,11 @@
   (set-object-@sec! self s)
   (set-object-@min! self m)
   (set-object-@hour! self h))
+
+
+
+(struct object
+  ([classid]
+   [@sec #:mutable]
+   [@min #:mutable]
+   [@hour #:mutable]))
