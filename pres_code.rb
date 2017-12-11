@@ -11,4 +11,11 @@ class Examples
 
 
 
+  def set_time(s, m, h)
+    @sec = s
+    @min = m
+    @hour = h
+  end
+
+
 end
