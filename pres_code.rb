@@ -38,3 +38,16 @@ class Money
   def value() if (@val>0) then (return @val) else (return 0.01) end
 
 end
+
+
+
+
+class UserFile < ActiveRecord::Base
+  belongs_to :folder
+
+
+  type '(Folder target) -> %bool b {{ folder == target }}'
+  def move(taget) folder=target; save!; end
+
+
+end
