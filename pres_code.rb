@@ -50,4 +50,7 @@ class UserFile < ActiveRecord::Base
   def move(taget) folder=target; save!; end
 
 
+  type :folder, '() -> Folder', pure: true
+  type :folder=, '(Folder in) -> Folder out {{ folder == in }}'
+
 end
