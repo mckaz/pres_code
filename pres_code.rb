@@ -19,3 +19,22 @@ class Examples
 
 
 end
+
+
+
+module Arithmetic
+
+  type '(Integer x) -> Float r {{ r==x/value() }}'
+  def div_by_val(x) x/value(); end
+
+  type :value, '() -> Float val {{ val > 0 }}', pure: true
+       
+end
+
+
+class Money
+  include Arithmetic 
+
+  def value() if (@val>0) then (return @val) else (return 0.01) end
+
+end
