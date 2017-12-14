@@ -18,6 +18,18 @@ class Examples
   end
 
 
+  type "(Integer, Integer) -> Integer"
+  def plus(x, y)
+    x + y
+  end
+
+
+  type '(A) -> Integer'
+  def foo(x)
+    x.m(42)
+  end
+
+
 end
 
 
@@ -54,3 +66,7 @@ class UserFile < ActiveRecord::Base
   type :folder=, '(Folder in) -> Folder out {{ folder == in }}'
 
 end
+
+
+
+
