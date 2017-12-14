@@ -23,3 +23,8 @@
    [@min #:mutable]
    [@hour #:mutable]))
 
+
+
+(define (foo self x)
+  (A_m x 42)
+)
