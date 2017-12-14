@@ -28,3 +28,13 @@
 (define (foo self x)
   (A_m x 42)
 )
+
+
+
+(let ([in 42])
+  (assert (> 42 0))
+  (define ret (m_uninterp x 42))
+  (assume (> ret 0))
+  ret)
+
+
