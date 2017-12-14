@@ -35,6 +35,14 @@
   (assert (> 42 0))
   (define ret (m_uninterp x 42))
   (assume (> ret 0))
-  ret)
+  ret) ;; precond
+
+
+
+(let ([in 42])
+  (havoc (object-@foo in))
+  (define-symbolic ret integer?)
+  (assume (> ret 0))
+  ret) 
 
 
