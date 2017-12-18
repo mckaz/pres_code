@@ -29,6 +29,8 @@ class Examples
     x.m(42)
   end
 
+  RDL.do_verify(:method)
+
 
 end
 
