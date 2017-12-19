@@ -43,6 +43,11 @@
   (havoc (object-@foo in))
   (define-symbolic ret integer?)
   (assume (> ret 0))
-  ret) 
+  ret)
+
+
+(cond [(= (object-classid x) 1) (A_m x)]
+      [(= (object-classid x) 2) (B_m x)])
+
 
 
